@@ -9,99 +9,81 @@ class PatientInfo extends StatefulWidget {
   const PatientInfo({Key? key}) : super(key: key);
 
   @override
-  _PatientInfoState createState() => _PatientInfoState();
+  State<PatientInfo> createState() => _PatientInfoState();
 }
 
 class _PatientInfoState extends State<PatientInfo>
-    with SingleTickerProviderStateMixin {
-  late TabController tabController;
+    with TickerProviderStateMixin {
+  List<Tab> tabs = [
+    const Tab(
+      text: '基本信息',
+    ),
+    const Tab(
+      text: "日程安排",
+    ),
+    const Tab(
+      text: "健康数据",
+    ),
+    const Tab(
+      text: "护理记录",
+    ),
+  ];
+
+  late TabController _tabController;
 
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 4, vsync: this);
+    _tabController = TabController(vsync: this, length: tabs.length);
   }
 
   @override
   void dispose() {
     super.dispose();
-    tabController.dispose();
+    _tabController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(
-            child: Text(
-              "张三",
-              style: TextStyle(
-                  color: HexToColor("#3A3A3A"), fontSize: 19, height: 75),
+          centerTitle: true,
+          title: Text(
+            "张三",
+            style: TextStyle(
+                color: HexToColor("#3A3A3A"),
+                fontSize: 19,
+                fontWeight: FontWeight.bold),
+          ),
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(50),
+            child: Theme(
+              data: ThemeData(
+                  splashColor: Colors.transparent,
+                  highlightColor: Colors.transparent),
+              child: TabBar(
+                tabs: tabs,
+                labelColor: HexToColor("#477CE8"),
+                labelStyle: const TextStyle(fontWeight: FontWeight.bold),
+                unselectedLabelStyle: const TextStyle(fontSize: 15),
+                unselectedLabelColor: HexToColor("#333333"),
+                controller: _tabController,
+              ),
             ),
           ),
+          backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
         ),
-        body: Column(
-          children: [
-            Container(
-              height: 50,
-              color: HexToColor("#F7F8FC"),
-              width: double.infinity,
-              child: TabBar(
-                //标记是否为滚动模式
-                isScrollable: false,
-                //与TabBarView绑定的纽带
-                controller: tabController,
-                //定义tab的item,其中tabs中的item为widget类型,可自定义
-                tabs: [
-                  Container(
-                    color: Colors.white,
-                    child: Text(
-                      "首页",
-                      style: TextStyle(
-                          color: HexToColor("#333333"), fontSize: 16, height: 50),
-                    ),
-                  ),
-                  Container(
-                    color: Colors.white,
-                    child: Text(
-                      "首页",
-                      style: TextStyle(
-                          color: HexToColor("#333333"), fontSize: 16, height: 50),
-                    ),
-                  ),
-                  Container(
-                    color: Colors.white,
-                    child: Text(
-                      "首页",
-                      style: TextStyle(
-                          color: HexToColor("#333333"), fontSize: 16, height: 50),
-                    ),
-                  ),
-                  Container(
-                    color: Colors.white,
-                    child: Text(
-                      "首页",
-                      style: TextStyle(
-                          color: HexToColor("#333333"), fontSize: 16, height: 50),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              color: Colors.red,
-              height: 200,
-              child: TabBarView(
-                controller: tabController,
-                children: const <Widget>[
-                  BasicInfo(),
-                  HealthData(),
-                  ScheduleInfo(),
-                  NurseRecords(),
-                ],
-              ),
-            ),
-          ],
+        body: Container(
+          color: HexToColor("#F7F8FC"),
+          child: TabBarView(
+            controller: _tabController,
+            children: const [
+              BasicInfo(),
+              HealthData(),
+              ScheduleInfo(),
+              NurseRecords(),
+            ],
+          ),
         ));
   }
 }
