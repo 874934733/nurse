@@ -2,16 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:nurse/messagelist/MessageList.dart';
 import 'package:nurse/mine/mine.dart';
 import 'package:nurse/nurse/nurse.dart';
 import 'package:nurse/work/workpage.dart';
-
-import 'careplan/CarePlan.dart';
-import 'changeshifts/ChangeShifts.dart';
-import 'healthhandbook/HealthHandbook.dart';
-import 'healthhistory/HealthHistory.dart';
-import 'nursingrecords/NursingRecords.dart';
 
 void main() {
   runApp(const MyApp());

@@ -79,8 +79,8 @@ class _PatientInfoState extends State<PatientInfo>
             controller: _tabController,
             children: const [
               BasicInfo(),
-              HealthData(),
               ScheduleInfo(),
+              HealthData(),
               NurseRecords(),
             ],
           ),
