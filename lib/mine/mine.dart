@@ -12,22 +12,6 @@ class MinePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          color: HexToColor("#F7F8FC"), // 设置容器的颜色
-        ),
-        child: Mine(),
-      ),
-    );
-  }
-}
-
-class Mine extends StatelessWidget {
-  const Mine({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
         body: Container(
             color: HexToColor("#F7F8FC"),
             child: Column(
