@@ -72,11 +72,27 @@ class _HomePageState extends State<HomePage> {
             label: "工作",
           ),
           NavigationDestination(
-            icon: Icon(Icons.car_crash),
+            selectedIcon: Image(
+                height: 20,
+                width: 20,
+                color: Colors.transparent,
+                image: AssetImage('assets/ic_tab2_selected.png')),
+            icon: Image(
+                height: 20,
+                width: 20,
+                image: AssetImage('assets/ic_tab2_normal.png')),
             label: "护理",
           ),
           NavigationDestination(
-            icon: Icon(Icons.person),
+            selectedIcon: Image(
+                height: 20,
+                width: 20,
+                color: Colors.transparent,
+                image: AssetImage('assets/ic_tab3_selected.png')),
+            icon: Image(
+                height: 20,
+                width: 20,
+                image: AssetImage('assets/ic_tab3_normal.png')),
             label: "我的",
           ),
         ],
