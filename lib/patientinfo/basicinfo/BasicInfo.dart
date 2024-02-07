@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-import "../../utils/HexToColor.dart";
+import "../../utils/hextocolor.dart";
 
 class BasicInfo extends StatelessWidget {
   const BasicInfo({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nurse/patientinfo/PatientInfo.dart';
 
-import '../utils/HexToColor.dart';
+import '../utils/hextocolor.dart';
 
 class NursePage extends StatefulWidget {
   const NursePage({super.key});

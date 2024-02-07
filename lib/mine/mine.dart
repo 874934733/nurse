@@ -4,7 +4,7 @@ import 'package:nurse/nursingrecords/NursingRecords.dart';
 
 import '../healthhandbook/HealthHandbook.dart';
 import '../personalinfo/PersonalInfo.dart';
-import '../utils/HexToColor.dart';
+import '../utils/hextocolor.dart';
 
 class MinePage extends StatelessWidget {
   const MinePage({super.key});

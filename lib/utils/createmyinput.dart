@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nurse/utils/HexToColor.dart';
+import 'package:nurse/utils/hextocolor.dart';
 
 class CreateMyInput extends StatelessWidget {
   final iconString;

@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:nurse/healthhistory/HealthHistory.dart";
 
-import "../../utils/HexToColor.dart";
+import "../../utils/hextocolor.dart";
 
 class HealthData extends StatelessWidget {
   const HealthData({super.key});

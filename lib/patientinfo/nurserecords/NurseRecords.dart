@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-import "../../utils/HexToColor.dart";
+import "../../utils/hextocolor.dart";
 
 class NurseRecords extends StatelessWidget {
   const NurseRecords({Key? key}) : super(key: key);

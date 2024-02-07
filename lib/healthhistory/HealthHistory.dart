@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/HexToColor.dart';
+import '../utils/hextocolor.dart';
 
 class HealthHistoryPage extends StatelessWidget {
   const HealthHistoryPage({Key? key}) : super(key: key);

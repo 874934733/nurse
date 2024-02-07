@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nurse/healthhandbook/HealthHandbook.dart';
-import 'package:nurse/utils/HexToColor.dart';
+import 'package:nurse/utils/hextocolor.dart';
 
 import '../careplan/CarePlan.dart';
 import '../changeshifts/ChangeShifts.dart';

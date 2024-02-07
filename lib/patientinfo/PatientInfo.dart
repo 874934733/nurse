@@ -3,7 +3,7 @@ import 'package:nurse/patientinfo/basicinfo/BasicInfo.dart';
 import 'package:nurse/patientinfo/healthdata/HealthData.dart';
 import 'package:nurse/patientinfo/nurserecords/NurseRecords.dart';
 import 'package:nurse/patientinfo/schedule/ScheduleInfo.dart';
-import 'package:nurse/utils/HexToColor.dart';
+import 'package:nurse/utils/hextocolor.dart';
 
 class PatientInfo extends StatefulWidget {
   const PatientInfo({Key? key}) : super(key: key);

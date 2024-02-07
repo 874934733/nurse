@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/HexToColor.dart';
+import '../utils/hextocolor.dart';
 
 class ChangeShiftsPage extends StatefulWidget {
   const ChangeShiftsPage({super.key});
